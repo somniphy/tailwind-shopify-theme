@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Optional: Your custom theme colors, fonts, spacing, etc. */
+@theme {
+  --color-primary: #1e1e1e;
+  --color-secondary: #dfd8ce;
+  --color-accent: #ff6f61;
+}
+
+/* Tell Tailwind to scan all Liquid files for classes */
+@source "../**/*.liquid";
