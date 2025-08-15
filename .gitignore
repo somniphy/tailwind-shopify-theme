@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Tailwind build cache
+*.cache
+.cache/
+
+# macOS system files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# Tailwind input file is in src/, only output goes in /assets
+# Ignore the generated CSS source maps if you have them
+*.map
+
+# Shopify CLI files
+shopify.lock
+.shopify/
+
+# OS junk
+Thumbs.db
