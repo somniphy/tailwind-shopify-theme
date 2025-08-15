@@ -1,6 +1,13 @@
 [
   {
     "name": "Theme settings",
-    "settings": []
+    "settings": [
+      {
+        "type": "text",
+        "id": "theme_name",
+        " label": "Theme Name",
+        "default": "Minimalist Chair Store"
+      }
+    ]
   }
 ]
