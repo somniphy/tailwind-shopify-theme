@@ -1,0 +1,30 @@
+<section class="py-20 px-6 text-center max-w-4xl mx-auto">
+  <h2 class="text-3xl font-serif mb-4">{{ section.settings.heading }}</h2>
+  <p class="text-lg text-gray-600">{{ section.settings.text }}</p>
+</section>
+
+{% schema %}
+{
+  "name": "Brand Intro",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Crafting Timeless Minimalist Chairs"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Intro Text",
+      "default": "Our chairs blend simplicity, comfort, and elegance. Designed for modern living, each piece is a statement of quality craftsmanship."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Intro",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

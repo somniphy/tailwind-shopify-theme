@@ -1,0 +1,54 @@
+<section class="py-16 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-serif mb-8">{{ section.settings.heading }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {% if section.settings.collection != blank %}
+        {% for product in collections[section.settings.collection].products limit: section.settings.products_limit %}
+          <a href="{{ product.url }}" class="group block">
+            <div class="aspect-square overflow-hidden rounded-xl bg-gray-100">
+              <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}" class="object-cover w-full h-full group-hover:scale-105 transition">
+            </div>
+            <h3 class="mt-4 font-semibold">{{ product.title }}</h3>
+            <p class="text-primary font-bold">{{ product.price | money }}</p>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p>No collection selected.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Product Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "label": "Number of products",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

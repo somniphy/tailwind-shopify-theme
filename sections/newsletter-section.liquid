@@ -1,0 +1,60 @@
+<section class="py-20 px-6 bg-white border-t border-gray-200">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-serif mb-4">{{ section.settings.heading }}</h2>
+    <p class="text-gray-600 mb-6">{{ section.settings.subtext }}</p>
+
+    {% form 'customer' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input
+          type="email"
+          name="contact[email]"
+          placeholder="{{ section.settings.placeholder }}"
+          class="border border-gray-300 rounded-lg px-4 py-3 w-full sm:w-auto"
+          required
+        >
+        <button type="submit" class="bg-black text-white px-6 py-3 rounded-lg">
+          {{ section.settings.button_text }}
+        </button>
+      </div>
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter Signup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stay in the Loop"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Get exclusive updates on our latest minimalist chair designs."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email Placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Subscribe"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Signup",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

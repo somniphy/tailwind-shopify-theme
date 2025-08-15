@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-section",
+      "settings": {
+        "heading": "Minimalist Chairs, Timeless Comfort",
+        "subheading": "Discover seating that blends clean design with lasting comfort.",
+        "background": "shopify://shop_images/hero-bg.jpg",
+        "button_text": "Shop Now",
+        "button_link": "/collections/all"
+      }
+    },
+    "categories": {
+      "type": "categories-section",
+      "settings": {
+        "heading": "Shop by Category",
+        "subheading": "Explore our curated selection."
+      }
+    },
+    "featured": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "Best Sellers",
+        "collection": "chairs"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter-section",
+      "settings": {
+        "heading": "Stay Updated",
+        "subheading": "Get exclusive offers and design inspiration straight to your inbox."
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "categories",
+    "featured",
+    "newsletter"
+  ]
+}
